@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=SJIS" />
+<title>COME ON!!!NEWS!!!</title>
+</head>
+<body>
+<center>
+<form action="" method="post">
+    「このユーチューブ動画、めっちゃおもろいからみんな見てー！！！」っていう<br>
+    URL：<input type="text" name="url" size="80">
+    <input type="submit" value="投稿" name="go" /><br>
+    <input type="checkbox" name="chk" value="omoro">おもろっ
+    <input type="checkbox" name="chk" value="kimo">すげぇ
+    <input type="checkbox" name="chk" value="kando">キュン
+    <input type="checkbox" name="chk" value="sine">あほ
+    <input type="checkbox" name="chk" value="he">なるほど～
+</form>
+<hr>
+</center>
+
+<?php
+
+    $formUrl = htmlspecialchars($_POST["url"]);
+    
+//URLの存在チェック
+    if((! @file_get_contents($formUrl) || preg_match("/^https:\/\/www.youtube.com\/watch/", $formUrl) === 0) && $formUrl != ""){
+        echo "有効なYouTubeのURL入れてね。\n<br><br>\n";
+        echo "<a href=\"\">戻る</a>";
+        exit;
+    }
+
+    $arrUrl = file("url.txt");
+
+    
+    //$arrUrl[0] = null;
+    //var_dump($arrUrl);
+        
+//    file_put_contents("new.txt", "");
+        
+    foreach($arrUrl as $value){
+    
+        $urlOnly = str_replace("\n","",$value);
+        
+        if($formUrl == $urlOnly){
+            echo "もう、あるわい！<br><br>\n";
+            echo "<a href=\"\">戻る</a>";
+            exit;
+        }
+    }
+    
+    if($formUrl != ""){
+        array_unshift($arrUrl, $formUrl."\n");
+        file_put_contents("url.txt", $arrUrl);
+        
+        $source = file_get_contents("source.txt");
+        file_put_contents("source.txt","◆<a href=\"".$formUrl."\" target=\"_blank\">".getPageTitle($formUrl)."</a>　<br>\n".$source);
+    }
+    
+    include 'source.txt';
+
+    function getPageTitle($url){
+    
+        $html = "";
+        
+        mb_language("Japanese");
+        
+        $html = file_get_contents($url);
+        
+        if(mb_detect_encoding($html) != "SJIS"){
+            $html = mb_convert_encoding($html, "SJIS", "auto");
+        }
+        
+        if(preg_match("/<title>(.*?)<\/title>/i", $html, $matches)){
+            return $matches[1];
+        } else {
+            return false;
+        }
+    }
+?>
+
+</body>
+</html>

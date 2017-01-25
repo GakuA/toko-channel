@@ -1,0 +1,97 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<?php
+    include("array.inc");
+    session_start();
+    date_default_timezone_set('Asia/Tokyo');
+    $v = $_POST["v"];
+
+        setcookie($v,"a",strtotime(date("d M Y", strtotime("+1 day"))));
+
+        //mysql
+        $link = mysql_connect('mysql1.minibird.netowl.jp', 'tokoch_shuron', 'yamamototamura40');
+        if (!$link) {
+            die('接続失敗です。'.mysql_error());
+        }
+
+        $db_selected = mysql_select_db('tokoch_video', $link);
+        if (!$db_selected){
+            exit('データベース選択失敗です。'.mysql_error());
+        }
+
+        $result = mysql_query("SELECT * FROM video where v = '$v'");
+        if(!$result){
+            exit('SELECTクエリーが失敗しました。'.mysql_error());
+        }
+
+        $row = mysql_fetch_assoc($result);
+        $arrPost = explode(",", $_POST['hyoka']);
+        foreach($arrPost as $value){
+            $arrSelectHyoka[] = $arrAone[$value];
+        }
+
+        foreach($arrSelectHyoka as $value){
+            $point = $row[$value] + 1;
+            $sql = "UPDATE video SET `$value` = '$point' WHERE v = '$v'";
+
+            $result_flag = mysql_query($sql);
+
+            if (!$result_flag) {
+                exit('UPDATEクエリーが失敗しました。'.mysql_error());
+            }
+        }
+        
+        $time = date("Y-m-d H:i:s");
+        $total = $row["total"] + 1;
+        $sql = "UPDATE video SET time = '$time', total = $total WHERE v = '$v'";
+
+        $result_flag = mysql_query($sql);
+
+        if (!$result_flag) {
+            exit('UPDATEクエリーが失敗しました。'.mysql_error());
+        }
+
+        $result = mysql_query("SELECT * FROM video where v = '$v'");
+        if(!$result){
+            exit('SELECTクエリーが失敗しました。'.mysql_error());
+        }
+
+        $row = mysql_fetch_assoc($result);
+
+    echo "<div style=\"width:110px;display:inline-block;margin-left:10px\">\n";
+    echo "<form style=\"position:relative;\" name=\"hyoka\" method=\"post\">\n";
+
+    $i = 0;
+    foreach($arrEmotion as $key => $value){
+        echo "<label style=\"position:absolute; top:" . 19 * $i . "px;\" for=\"$key\">";
+        echo "<input type=\"checkbox\" id=\"$key\" name=\"chk[]\" value=\"".$key."\">".$value;
+        echo "</label>";
+        echo "<br>\n";
+        $i++;
+    }
+    echo "<span style=\"position:absolute; top:274px\"><input type=\"button\" value=\"評価する\" name=\"go\" style=\"cursor:pointer\" onclick=\"check_hyoka('a')\"><img onmouseover=\"qaHyoka.style.display='block'\" onmouseout=\"qaHyoka.style.display='none'\" src=\"img/hatena.png\" style=\"width:15px;margin-left:5px\"></span><br>\n";
+    echo "<div style=\"position:absolute; top:300px\">評価回数：".$row["total"]."</div>\n";
+    echo "</form>\n";
+    echo "</div>\n";
+    
+    echo "<div style=\"vertical-align:top;display:inline-block;\">\n";
+    echo "<img style=\"position:relative;z-index:1\" src=\"img/graph.jpg\"></div>\n";
+    echo "<div id=\"bar\" style=\"margin-top:1px;vertical-align:top;display:inline-block;text-align:left;margin-left:-142px;position:relative;z-index:2\">";
+
+    $color = "#FF0000";
+
+    foreach($arrEmotion as $key => $value){
+        if($key == "d"){
+            $color = "#0000FF";
+        }
+        if($row["total"] == 0){
+            $width = 0;
+        }else{
+            $width = $row[$key] / $row["total"] *138;
+        }
+        echo "<span style=\"display:inline-block;margin:2px 0;width:" . $width . "px;height:15px;background-color:" . $color . "\"></span>";
+        echo "<br>\n";
+    }
+
+    echo "</div>\n";
+
+        mysql_close($link);

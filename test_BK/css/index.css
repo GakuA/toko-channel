@@ -1,0 +1,60 @@
+body{
+font-size:15px;
+}
+
+img{
+border:none;
+}
+
+.left{
+margin-left:20px;
+text-align:center;
+}
+
+label,input[type='checkbox'] {
+    cursor:pointer;
+}
+
+label,input[type='submit'] {
+    cursor:pointer;
+}
+
+.rankTitle{
+margin-top:-15px;
+}
+
+.rank{
+height:100px;
+overflow:auto;
+}
+
+.line{
+line-height:30px;
+}
+
+.top{
+margin-top:20px;
+text-align: center;
+}
+
+.main{
+line-height:20px;
+overflow:scroll;
+}
+
+.margin{
+margin-top:20px;
+margin-bottom:40px;
+}
+
+.video{
+margin-top:10px;
+margin-bottom:10px;
+text-align:center;
+}
+
+.check{
+margin-left:25px;
+margin-bottom:-10px;
+text-align:left;
+}

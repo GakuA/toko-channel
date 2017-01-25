@@ -1,0 +1,42 @@
+body{
+font-size:15px;
+font-family:"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ","Meiryo","ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+}
+
+img{
+border:none;
+}
+
+.top{
+margin-top:8px;
+text-align: center;
+}
+
+label,input[type='checkbox'] {
+    cursor:pointer;
+}
+
+label,input[type='submit'] {
+    cursor:pointer;
+}
+
+.post{
+width: 55%;
+}
+
+a.black:link {
+text-decoration: none;
+color : #000000; 
+}
+a.black:visited {
+text-decoration : none; 
+color : #000000; 
+}
+a.black:active {
+text-decoration : none; 
+color : #000000; 
+}
+a.black:hover {
+text-decoration : none; 
+color : #000000; 
+}
