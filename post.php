@@ -124,7 +124,7 @@
         }
         $time = date("Y-m-d H:i:s");
         $sql = "INSERT INTO video(v, title, time, site, thumbnail) VALUES ('$v', '$title', '$time', '$site', '$thumbnail')";
-        $result_flag = mysql_query($sql);
+        $result_flag = pg_query($sql);
 
         if (!$result_flag) {
             exit('INSERTクエリーが失敗しました。'.mysql_error());
@@ -134,7 +134,7 @@
             foreach($_REQUEST["chk"] as $value){
                 $sql = "UPDATE video SET `$value` = '1', total = '1' WHERE v = '$v'";
 
-                $result_flag = mysql_query($sql);
+                $result_flag = pg_query($sql);
 
                 if (!$result_flag) {
                     die('UPDATEクエリーが失敗しました。'.mysql_error());

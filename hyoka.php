@@ -8,22 +8,22 @@
         setcookie($v,"a",strtotime(date("d M Y", strtotime("+1 day"))));
 
         //mysql
-        $link = mysql_connect('mysql1.minibird.netowl.jp', 'tokoch_shuron', 'yamamototamura40');
+        $link = pg_connect('ec2-54-163-230-198.compute-1.amazonaws.com', 'hxueosahpeynga', 'a01411914736af1c909c460c329663731cd9a580fcac7840a0d410e2a5eab54f');
         if (!$link) {
             die('接続失敗です。'.mysql_error());
         }
-
+/*
         $db_selected = mysql_select_db('tokoch_video', $link);
         if (!$db_selected){
             exit('データベース選択失敗です。'.mysql_error());
         }
-
-        $result = mysql_query("SELECT * FROM video where v = '$v'");
+*/
+        $result = pg_query("SELECT * FROM video where v = '$v'");
         if(!$result){
             exit('SELECTクエリーが失敗しました。'.mysql_error());
         }
 
-        $row = mysql_fetch_assoc($result);
+        $row = pg_fetch_assoc($result);
         $arrPost = explode(",", $_POST['hyoka']);
         foreach($arrPost as $value){
             $arrSelectHyoka[] = $arrAone[$value];
@@ -33,29 +33,29 @@
             $point = $row[$value] + 1;
             $sql = "UPDATE video SET `$value` = '$point' WHERE v = '$v'";
 
-            $result_flag = mysql_query($sql);
+            $result_flag = pg_query($sql);
 
             if (!$result_flag) {
                 exit('UPDATEクエリーが失敗しました。'.mysql_error());
             }
         }
-        
+
         $time = date("Y-m-d H:i:s");
         $total = $row["total"] + 1;
         $sql = "UPDATE video SET time = '$time', total = $total WHERE v = '$v'";
 
-        $result_flag = mysql_query($sql);
+        $result_flag = pg_query($sql);
 
         if (!$result_flag) {
             exit('UPDATEクエリーが失敗しました。'.mysql_error());
         }
 
-        $result = mysql_query("SELECT * FROM video where v = '$v'");
+        $result = pg_query("SELECT * FROM video where v = '$v'");
         if(!$result){
             exit('SELECTクエリーが失敗しました。'.mysql_error());
         }
 
-        $row = mysql_fetch_assoc($result);
+        $row = pg_fetch_assoc($result);
 
     echo "<div style=\"width:110px;display:inline-block;margin-left:10px\">\n";
     echo "<form style=\"position:relative;\" name=\"hyoka\" method=\"post\">\n";
@@ -72,7 +72,7 @@
     echo "<div style=\"position:absolute; top:300px\">評価回数：".$row["total"]."</div>\n";
     echo "</form>\n";
     echo "</div>\n";
-    
+
     echo "<div style=\"vertical-align:top;display:inline-block;\">\n";
     echo "<img style=\"position:relative;z-index:1\" src=\"img/graph.jpg\"></div>\n";
     echo "<div id=\"bar\" style=\"margin-top:1px;vertical-align:top;display:inline-block;text-align:left;margin-left:-142px;position:relative;z-index:2\">";
@@ -94,4 +94,4 @@
 
     echo "</div>\n";
 
-        mysql_close($link);
+        pg_close($link);
