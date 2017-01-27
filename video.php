@@ -3,7 +3,7 @@
         var flag = "f";
         var i = 0;
         var arrHyoka = [];
-        
+
         while(i < 14){
             if(document.hyoka.elements[i].checked){
                 flag = "t";
@@ -11,7 +11,7 @@
             }
             i = parseInt(i) + 1;
         }
-        
+
         if(flag == "f"){
             window.alert("感情を選んでね！");
         }else
@@ -28,7 +28,7 @@
             });
         }
     }
-    
+
     function favorite(title, onOff, nicoThumb){
         $.ajax({
             type: "POST",
@@ -60,10 +60,10 @@
 <div style="float:left;">
   <?php
     $v = $_SESSION["v"];
-    
+
     $result = mysql_query("SELECT * FROM video where v = '$v'");
     if(!$result){
-        exit('SELECTクエリーが失敗しました。'.mysql_error());
+        exit('SELECTクエリーが失敗しました。');
     }
 
     $row = mysql_fetch_assoc($result);
@@ -80,7 +80,7 @@
 
     $_SESSION["total"] = $row["total"];
     $nicoThumb = $row["thumbnail"];
-    
+
       if(isset($_COOKIE["favorite"]["$v"])){
           echo '<div id="favoNew" style="cursor:pointer;display:inline-block;" onclick="favorite('."'".str_replace("&#39;", "@`qp", $row["title"])."', 'off', '$nicoThumb'".')"><img src="img/favo_on.jpg"><span style="vertical-align:top;">お気に入り解除</span></div>';
       }else{
@@ -95,7 +95,7 @@
           }elseif($row["site"] == "n"){
               $url = 'http://www.nicovideo.jp/watch/' . $_SESSION["v"];
           }
-          
+
           echo "再生回数：" . getCount($url, $row["site"]);
       ?>
   </div>
@@ -166,7 +166,7 @@
 //                  								alert('見所Timeは半角数字');
 //                  								return;
 //                  							}
-                  							
+
                   							if(confirm('以上の内容で送信しても宜しいですか？\n確認画面は表示されません。\n訂正変更/削除も行えません。このまま送信しても宜しいですか？')) {
                   								send();
                   							}" /></td></tr>
@@ -221,7 +221,7 @@ amazon_ad_tag = "akazawagaku-22"; amazon_ad_width = "180"; amazon_ad_height = "1
     echo "<div style=\"position:absolute; top:300px\">評価回数：".$_SESSION["total"]."</div>\n";
     echo "</form>\n";
     echo "</div>\n";
-    
+
     echo "<div style=\"vertical-align:top;display:inline-block;\">\n";
     echo "<img style=\"position:relative;z-index:1\" src=\"img/graph.jpg\"></div>\n";
     echo "<div id=\"bar\" style=\"margin-top:1px;vertical-align:top;display:inline-block;text-align:left;margin-left:-142px;position:relative;z-index:2\">";

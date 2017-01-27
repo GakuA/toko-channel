@@ -15,12 +15,12 @@
     //mysql
     $link = pg_connect('host=ec2-23-21-224-199.compute-1.amazonaws.com dbname=d8afnl5oh4vu8b user=mvurgftlbjcxfk password=42e63ae60ed1e92cc3a729d3d92e89c03f69e2b37c76ecb2253e0b8d02064d71');
     if (!$link) {
-        die('接続失敗です。'.mysql_error());
+        die('接続失敗です。');
     }
 /*
     $db_selected = mysql_select_db('tokoch_video', $link);
     if (!$db_selected){
-        die('データベース選択失敗です。'.mysql_error());
+        die('データベース選択失敗です。');
     }
 */
     if($_SESSION["tab"] == "favorite"){
@@ -56,14 +56,14 @@
             $result = pg_query("SELECT *, $total/(total + 1) as rank FROM video where $total != 0 order by rank desc,time desc limit 198");
 
             if(!$result){
-                exit('SELECTクエリーが失敗しました。'.mysql_error());
+                exit('SELECTクエリーが失敗しました。');
             }
 
         }else{
 
             $result = pg_query("SELECT * FROM video order by time desc limit 198");
             if(!$result){
-                exit('SELECTクエリーが失敗しました。'.mysql_error());
+                exit('SELECTクエリーが失敗しました。');
             }
         }
 
