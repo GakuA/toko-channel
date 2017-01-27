@@ -40,6 +40,7 @@
         echo '<div style="margin:20px">お気に入りの登録がありません</div>';
       }
     }else{
+      echo "1";
         if(isset($_SESSION["tab"])){
             $total = 1;
             foreach($_SESSION["tabList"][$_SESSION["tab"]] as $value){
@@ -82,6 +83,3 @@
             echo "<div style=\"display:inline-block\">".$title."</div></a></div>\n";
         }
     }
-
-        echo "OK";
-        /*
