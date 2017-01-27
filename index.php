@@ -73,7 +73,7 @@
 		}(document, 'script', 'facebook-jssdk'));
 
 	</script>
-	<?php if(isset($_GET[ "id"])){ $_SESSION[ "v"]=$ _GET[ "id"]; } date_default_timezone_set( 'Asia/Tokyo'); include "function.inc"; include "array.inc"; //mysql $link=m ysql_connect( 'mysql1.minibird.netowl.jp', 'tokoch_shuron', 'yamamototamura40'); if (!$link) { die( '接続失敗です。'.mysql_error()); } $db_selected=m ysql_select_db( 'tokoch_video', $link); if (!$db_selected){ die( 'データベース選択失敗です。'.mysql_error()); } ?>
+	<?php if(isset($_GET[ "id"])){ $_SESSION[ "v"]=$ _GET[ "id"]; } date_default_timezone_set( 'Asia/Tokyo'); include "function.inc"; include "array.inc"; ?>
 	<div style="width:1272px;margin:0 auto;">
 		<div style="float:left;width:1142px;">
 

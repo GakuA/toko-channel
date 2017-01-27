@@ -83,17 +83,12 @@
 //mysql
     $link = pg_connect('host=ec2-23-21-224-199.compute-1.amazonaws.com dbname=d8afnl5oh4vu8b user=mvurgftlbjcxfk password=42e63ae60ed1e92cc3a729d3d92e89c03f69e2b37c76ecb2253e0b8d02064d71');
     if (!$link) {
-        die('接続失敗です。'.mysql_error());
+        die('接続失敗です。');
     }
-/*
-    $db_selected = mysql_select_db('tokoch_video', $link);
-    if (!$db_selected){
-        die('データベース選択失敗です。'.mysql_error());
-    }
-*/
+
     $result = pg_query("SELECT * FROM video where v = '$v'");
     if(!$result){
-        exit('SELECTクエリーが失敗しました。'.mysql_error());
+        exit('SELECTクエリーが失敗しました。');
     }
 
     $row = pg_fetch_assoc($result);
@@ -127,7 +122,7 @@
         $result_flag = pg_query($sql);
 
         if (!$result_flag) {
-            exit('INSERTクエリーが失敗しました。'.mysql_error());
+            exit('INSERTクエリーが失敗しました。');
         }
 
         if(isset($_REQUEST["chk"])){
@@ -137,7 +132,7 @@
                 $result_flag = pg_query($sql);
 
                 if (!$result_flag) {
-                    die('UPDATEクエリーが失敗しました。'.mysql_error());
+                    die('UPDATEクエリーが失敗しました。');
                 }
             }
         }
