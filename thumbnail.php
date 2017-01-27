@@ -87,3 +87,4 @@
             echo "<div style=\"display:inline-block\">".$title."</div></a></div>\n";
         }
     }
+?>

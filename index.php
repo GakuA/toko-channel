@@ -27,12 +27,37 @@
 
 		function midokoro(mTime) {
 			$("#video").attr({
-				src: "//www.youtube.com/embed/<?php session_start();echo $_SESSION["
-				v "]; ?>?autoplay=1&rel=0&start=" + mTime
+				src: "//www.youtube.com/embed/<?php session_start();echo $_SESSION["v "]; ?>?autoplay=1&rel=0&start=" + mTime
 			});
 		}
 
 	</script>
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-64826925-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+
+	<!-- head 内か、body 終了タグの直前に次のタグを貼り付けてください。 -->
+	<script src="https://apis.google.com/js/platform.js" async defer>
+		{
+			lang: 'ja'
+		}
+
+	</script>
+
 </head>
 
 <body>
@@ -111,6 +136,25 @@
 				<!-- <span style="margin-left:10px"><a class="black" href="mailto:info@toko-channel.com">お問い合わせ</a></span> -->
 				<span><a class="black" href="mailto:akazawagaku@gmail.com">お問い合わせ</a></span>
 			</div>
+		</div>
+		<div style="margin-left:1152px;">
+			<!-- Rakuten Widget FROM HERE -->
+			<script type="text/javascript">
+				rakuten_design = "slide";
+				rakuten_affiliateId = "142a8617.af4bd4b0.142a8618.1730d9f1";
+				rakuten_items = "ctsmatch";
+				rakuten_genreId = 0;
+				rakuten_size = "120x600";
+				rakuten_target = "_blank";
+				rakuten_theme = "gray";
+				rakuten_border = "on";
+				rakuten_auto_mode = "on";
+				rakuten_genre_title = "off";
+				rakuten_recommend = "on";
+
+			</script>
+			<script type="text/javascript" src="http://xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js"></script>
+			<!-- Rakuten Widget TO HERE -->
 		</div>
 	</div>
 </body>
