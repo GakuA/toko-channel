@@ -18,8 +18,6 @@
         die('接続失敗です。');
     }
 
-    echo "OK";
-    /*
     if($_SESSION["tab"] == "favorite"){
       if(isset($_COOKIE["favorite"])){
         $arrFavorite == array();
@@ -84,3 +82,6 @@
             echo "<div style=\"display:inline-block\">".$title."</div></a></div>\n";
         }
     }
+
+        echo "OK";
+        /*
