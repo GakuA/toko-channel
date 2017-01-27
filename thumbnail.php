@@ -13,16 +13,16 @@
     }
 
     //mysql
-    $link = mysql_connect('mysql1.minibird.netowl.jp', 'tokoch_shuron', 'yamamototamura40');
+    $link = pg_connect('ec2-54-163-230-198.compute-1.amazonaws.com', 'hxueosahpeynga', 'a01411914736af1c909c460c329663731cd9a580fcac7840a0d410e2a5eab54f');
     if (!$link) {
         die('接続失敗です。'.mysql_error());
     }
-
+/*
     $db_selected = mysql_select_db('tokoch_video', $link);
     if (!$db_selected){
         die('データベース選択失敗です。'.mysql_error());
     }
-
+*/
     if($_SESSION["tab"] == "favorite"){
       if(isset($_COOKIE["favorite"])){
         $arrFavorite == array();
@@ -50,29 +50,29 @@
             foreach($_SESSION["tabList"][$_SESSION["tab"]] as $value){
                 $total = $total." * ".$value;
             }
-            
+
             $total = "pow($total, 1/".count($_SESSION["rank"]).")";
-            
-            $result = mysql_query("SELECT *, $total/(total + 1) as rank FROM video where $total != 0 order by rank desc,time desc limit 198");
+
+            $result = pg_query("SELECT *, $total/(total + 1) as rank FROM video where $total != 0 order by rank desc,time desc limit 198");
 
             if(!$result){
                 exit('SELECTクエリーが失敗しました。'.mysql_error());
             }
-            
+
         }else{
-            
-            $result = mysql_query("SELECT * FROM video order by time desc limit 198");
+
+            $result = pg_query("SELECT * FROM video order by time desc limit 198");
             if(!$result){
                 exit('SELECTクエリーが失敗しました。'.mysql_error());
             }
         }
 
-        while($row = mysql_fetch_assoc($result)){
+        while($row = pg_fetch_assoc($result)){
             if(!isset($_SESSION["v"]) || $_SESSION["fromTag"] == true){
                 $_SESSION["v"] = $row['v'];
                 unset($_SESSION["fromTag"]);
             }
-            
+
             $v = $row['v'];
             $title = $row['title'];
             $site = $row['site'];

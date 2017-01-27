@@ -7,7 +7,7 @@
 
     //ニコ動トップのタイトル
     $niconico = getPageTitle('http://www.nicovideo.jp/video_top');
-    
+
     $formUrl = htmlspecialchars($_POST["url"]);
     $formUrl = str_replace('https://m.youtube', 'https://www.youtube', $formUrl);
     $formUrl = str_replace('https://youtu.be/', 'https://www.youtube.com/watch?v=', $formUrl);
@@ -24,11 +24,11 @@
         location.href = "./";
         // -->
     </script>
-    
+
 <?php
     exit;
     }
-    
+
     if(getPageTitle($formUrl) == "YouTube" || getPageTitle($formUrl) == $niconico){
 
 ?>
@@ -39,7 +39,7 @@
         location.href = "./";
         // -->
     </script>
-    
+
 <?php
     exit;
     }
@@ -55,7 +55,7 @@
             <!--
                     alert('ごめん！R-18は無しで！');
                     location.href = "./";
-                    
+
             // -->
             </script>
 <?php
@@ -81,22 +81,22 @@
     }
 
 //mysql
-    $link = mysql_connect('mysql1.minibird.netowl.jp', 'tokoch_shuron', 'yamamototamura40');
+    $link = pg_connect('ec2-54-163-230-198.compute-1.amazonaws.com', 'hxueosahpeynga', 'a01411914736af1c909c460c329663731cd9a580fcac7840a0d410e2a5eab54f');
     if (!$link) {
         die('接続失敗です。'.mysql_error());
     }
-
+/*
     $db_selected = mysql_select_db('tokoch_video', $link);
     if (!$db_selected){
         die('データベース選択失敗です。'.mysql_error());
     }
-
-    $result = mysql_query("SELECT * FROM video where v = '$v'");
+*/
+    $result = pg_query("SELECT * FROM video where v = '$v'");
     if(!$result){
         exit('SELECTクエリーが失敗しました。'.mysql_error());
     }
-    
-    $row = mysql_fetch_assoc($result);
+
+    $row = pg_fetch_assoc($result);
     if($row['time'] != ""){
         $_SESSION["v"] = $v;
         $_SESSION["total"] = $row['total'];
@@ -107,7 +107,7 @@
         // 「OK」時の処理開始 ＋ 確認ダイアログの表示
         alert('投稿済みの動画です！');
             location.href = "./";
-        
+
 // -->
 </script>
 
@@ -129,7 +129,7 @@
         if (!$result_flag) {
             exit('INSERTクエリーが失敗しました。'.mysql_error());
         }
-        
+
         if(isset($_REQUEST["chk"])){
             foreach($_REQUEST["chk"] as $value){
                 $sql = "UPDATE video SET `$value` = '1', total = '1' WHERE v = '$v'";
