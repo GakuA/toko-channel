@@ -11,14 +11,15 @@
     if($_SESSION["tab"] == $_POST["tab"] && isset($_POST["tab"])){
         unset($_SESSION["tab"]);
     }
-echo "OK";
-/*
+
     //mysql
     $link = pg_connect('host=ec2-23-21-224-199.compute-1.amazonaws.com dbname=d8afnl5oh4vu8b user=mvurgftlbjcxfk password=42e63ae60ed1e92cc3a729d3d92e89c03f69e2b37c76ecb2253e0b8d02064d71');
     if (!$link) {
         die('接続失敗です。');
     }
 
+    echo "OK";
+    /*
     if($_SESSION["tab"] == "favorite"){
       if(isset($_COOKIE["favorite"])){
         $arrFavorite == array();
