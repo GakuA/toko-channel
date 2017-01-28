@@ -120,7 +120,7 @@
 			<!--thumbnail-->
 			<div id="thumbnail" style="border:solid 3px #aaaaaa;padding:3px 0 0 3px;font-size:12px;line-height:12px;height:184px;overflow-y:auto">
 
-				<?php //if($_SESSION[ "tab"]=="select" ){ include "tag.php"; }else{ include "thumbnail.php"; } ?>
+				<?php if($_SESSION[ "tab"]=="select" ){ include "tag.php"; }else{ include "thumbnail.php"; } ?>
 			</div>
 			<!--thumbnail-->
 
