@@ -113,7 +113,7 @@
 
 			<!--tab-->
 			<div id="tab" style="width:100%;margin-top:10px;overflow-x:auto;white-space:nowrap">
-				<?php //include "tab.php"; echo "\n"; ?>
+				<?php include "tab.php"; echo "\n"; ?>
 			</div>
 			<!--tab-->
 
