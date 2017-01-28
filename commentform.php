@@ -40,7 +40,7 @@ if ($_REQUEST[cmd] == 'commentRegist') {
 		"s3=$_REQUEST[s3]",
 		"\n"
 	));
-	$value = mb_convert_encoding($value, "UTF-8", "auto");
+//	$value = mb_convert_encoding($value, "UTF-8", "auto");
 	array_unshift ($Comment, $value);
 	data_save("$commentdir/comment.dat", $Comment);
 } elseif ($_REQUEST[cmd] == 'delete') {
@@ -66,7 +66,7 @@ if($Comment != array()){
 		$comment = dbfields($line);
 		$commet[comment] = wordwrap(str_replace("\r", "<br />", $commet[comment]));
 		$comment[date] = jst_time($comment[date], 7);
-		
+
 
 echo <<<_
 			<div class="commentlist">
