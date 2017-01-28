@@ -189,18 +189,7 @@
     </div>
 </div>
 
-<!--cm-->
-<!--    <div style="float:right;width:225px;height:250px;text-align:right;">-->
-    <div style="float:right;width:180px;height:250px;margin-right:2px;">
-        <script type="text/javascript"><!--
-amazon_ad_tag = "akazawagaku-22"; amazon_ad_width = "180"; amazon_ad_height = "150"; amazon_ad_logo = "hide"; amazon_ad_exclude = "武井+壮";//--></script>
-<script type="text/javascript" src="http://ir-jp.amazon-adsystem.com/s/ads.js"></script>
-        <div style="height:10px"></div>
-        <script type="text/javascript"><!--
-amazon_ad_tag = "akazawagaku-22"; amazon_ad_width = "180"; amazon_ad_height = "150"; amazon_ad_logo = "hide"; amazon_ad_exclude = "武井+壮";//--></script>
-<script type="text/javascript" src="http://ir-jp.amazon-adsystem.com/s/ads.js"></script>
-    </div>
-<!--cm-->
+
 
 <?php
 
