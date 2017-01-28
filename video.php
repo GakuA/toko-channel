@@ -85,7 +85,7 @@
           echo '<div id="favoNew" style="cursor:pointer;display:inline-block;" onclick="favorite('."'".str_replace("&#39;", "@`qp", $row["title"])."', 'off', '$nicoThumb'".')"><img src="img/favo_on.jpg"><span style="vertical-align:top;">お気に入り解除</span></div>';
       }else{
           echo '<div id="favoNew" style="cursor:pointer;display:inline-block;" onclick="favorite('."'".str_replace("&#39;", "@`qp", $row["title"])."', 'on', '$nicoThumb'".')"><img src="img/favo_off.jpg"><span style="vertical-align:top;">お気に入り登録</span></div>';
-      }
+      }echo "シュロ";
   ?>
   </div>
   <div style="padding:4px">
@@ -188,8 +188,6 @@
         <script type="text/javascript" src="/commentform.js"></script>
     </div>
 </div>
-
-
 
 <?php
 
