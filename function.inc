@@ -57,7 +57,7 @@
     }
 
     function getCount($url, $site){
-
+var_dump($url);
         $html = "";
 
         mb_language("Japanese");
@@ -67,7 +67,7 @@
         if(mb_detect_encoding($html) != "UTF-8"){
             $html = mb_convert_encoding($html, "UTF-8", "auto");
         }
-var_dump($html);
+
         if($site == ""){
             if(preg_match("/<div class=\"watch-view-count\">視聴回数\s(.*?)\s回<\/div>/i", $html, $matches)){
                 return $matches[1];
