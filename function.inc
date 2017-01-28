@@ -68,7 +68,7 @@
             $html = mb_convert_encoding($html, "UTF-8", "auto");
         }
 
-        if($site == ""){
+        if($site == "" || $site == null){
             if(preg_match("/<div class=\"watch-view-count\">視聴回数\s(.*?)\s回<\/div>/i", $html, $matches)){
                 return $matches[1];
             }elseif(preg_match("/<div class=\"watch-view-count\">(.*?)<\/div>/i", $html, $matches)){
