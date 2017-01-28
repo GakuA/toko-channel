@@ -1,3 +1,6 @@
+"require": {
+　　　"ext-mbstring": "*"
+　},
 var AjaxObject = false;
 
 if (window.XMLHttpRequest) {
