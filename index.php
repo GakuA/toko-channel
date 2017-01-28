@@ -128,7 +128,7 @@
 			<?php include "video.php"; ?>
 			<!--video-->
 
-			<?php mysql_close($link); ?>
+			<?php pg_close($link); ?>
 
 			<div style="clear:both;padding:6px 4px;border-top:2px solid #ff0000;width:100%;">
 				<!-- <a class="black" href="how.html">使い方</a> -->
