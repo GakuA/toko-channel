@@ -73,7 +73,7 @@
 		}(document, 'script', 'facebook-jssdk'));
 
 	</script>
-	<?php if(isset($_GET["id"])){ $_SESSION["v"]=$_GET["id"]; } /*date_default_timezone_set('Asia/Tokyo');*/ include "function.inc"; include "array.inc"; ?>
+	<?php if(isset($_GET["id"])){ $_SESSION["v"]=$_GET["id"]; } /*date_default_timezone_set('Asia/Tokyo'); include "function.inc";*/ include "array.inc"; ?>
 	<div style="width:1272px;margin:0 auto;">
 		<div style="float:left;width:1142px;">
 
