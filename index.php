@@ -27,7 +27,7 @@
 
 		function midokoro(mTime) {
 			$("#video").attr({
-				src: "//www.youtube.com/embed/<?php //session_start();echo $_SESSION["v "]; ?>?autoplay=1&rel=0&start=" + mTime
+				src: "//www.youtube.com/embed/<?php session_start();echo $_SESSION["v "]; ?>?autoplay=1&rel=0&start=" + mTime
 			});
 		}
 
