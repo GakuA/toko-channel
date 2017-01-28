@@ -27,7 +27,7 @@
 
 		function midokoro(mTime) {
 			$("#video").attr({
-				src: "//www.youtube.com/embed/<?php session_start();echo $_SESSION["v "]; ?>?autoplay=1&rel=0&start=" + mTime
+				src: "//www.youtube.com/embed/<?php //session_start();echo $_SESSION["v "]; ?>?autoplay=1&rel=0&start=" + mTime
 			});
 		}
 
@@ -73,7 +73,7 @@
 		}(document, 'script', 'facebook-jssdk'));
 
 	</script>
-	<?php if(isset($_GET[ "id"])){ $_SESSION[ "v"]=$ _GET[ "id"]; } date_default_timezone_set( 'Asia/Tokyo'); include "function.inc"; include "array.inc"; ?>
+	<?php //if(isset($_GET[ "id"])){ $_SESSION[ "v"]=$ _GET[ "id"]; } date_default_timezone_set( 'Asia/Tokyo'); include "function.inc"; include "array.inc"; ?>
 	<div style="width:1272px;margin:0 auto;">
 		<div style="float:left;width:1142px;">
 
@@ -113,7 +113,7 @@
 
 			<!--tab-->
 			<div id="tab" style="width:100%;margin-top:10px;overflow-x:auto;white-space:nowrap">
-				<?php include "tab.php"; echo "\n"; ?>
+				<?php //include "tab.php"; echo "\n"; ?>
 			</div>
 			<!--tab-->
 
@@ -128,7 +128,7 @@
 			<?php //include "video.php"; ?>
 			<!--video-->
 
-			<?php pg_close($link); ?>
+			<?php //pg_close($link); ?>
 
 			<div style="clear:both;padding:6px 4px;border-top:2px solid #ff0000;width:100%;">
 				<!-- <a class="black" href="how.html">使い方</a> -->
