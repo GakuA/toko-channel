@@ -125,7 +125,7 @@
 			<!--thumbnail-->
 
 			<!--video-->
-			<?php //include "video.php"; ?>
+			<?php include "video.php"; ?>
 			<!--video-->
 
 			<?php //pg_close($link); ?>
