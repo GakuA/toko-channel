@@ -15,6 +15,7 @@
 	<meta http-equiv="Content-Language" content="ja" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <script src="composer.json" type="text/javascript"></script>
 	<script src="jquery.js" type="text/javascript"></script>
 	<script src="popbox.js" type="text/javascript"></script>
 	<script src="js/ajax.js" type="text/javascript"></script>
