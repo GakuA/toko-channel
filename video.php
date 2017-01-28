@@ -61,12 +61,12 @@
   <?php
     $v = $_SESSION["v"];
 
-    $result = mysql_query("SELECT * FROM video where v = '$v'");
+    $result = pg_query("SELECT * FROM video where v = '$v'");
     if(!$result){
         exit('SELECTクエリーが失敗しました。');
     }
 
-    $row = mysql_fetch_assoc($result);
+    $row = pg_fetch_assoc($result);
 
     echo '<div>';
     if($row["site"] == "n"){
