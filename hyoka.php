@@ -31,7 +31,7 @@
             $result_flag = pg_query($sql);
 
             if (!$result_flag) {
-                exit('UPDATEクエリーが失敗しました。1');
+                exit(var_dump($sql));
             }
         }
 
