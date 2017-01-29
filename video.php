@@ -97,6 +97,7 @@
           }
 
           echo "再生回数：" . getCount($url, $row["site"]) . "回";
+          var_dump(getCount($url, $row["site"]));
       ?>
   </div>
 </div>
