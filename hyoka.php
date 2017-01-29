@@ -26,7 +26,7 @@
 
         foreach($arrSelectHyoka as $value){
             $point = $row[$value] + 1;
-            $sql = "UPDATE video SET \"$value\" = $point WHERE \"v\" = '$v'";
+            $sql = "UPDATE video SET \"$value\" = $point WHERE \"v\" = \"$v\"";
 
             $result_flag = pg_query($sql);
 
