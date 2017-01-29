@@ -3,14 +3,14 @@
 
         $html = "";
 
-        mb_language("Japanese");
+        //mb_language("Japanese");
 
         $html = @file_get_contents($url);
-
+/*
         if(mb_detect_encoding($html) != "UTF-8"){
             $html = mb_convert_encoding($html, "UTF-8", "auto");
         }
-
+*/
         if(preg_match("/<title>(.*?)<\/title>/i", $html, $matches)){
             return $matches[1];
         } else {
