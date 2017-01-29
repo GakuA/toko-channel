@@ -31,7 +31,7 @@
             $result_flag = pg_query($sql);
 
             if (!$result_flag) {
-                exit('UPDATEクエリーが失敗しました。');
+                exit('UPDATEクエリーが失敗しました。1');
             }
         }
 
@@ -42,7 +42,7 @@
         $result_flag = pg_query($sql);
 
         if (!$result_flag) {
-            exit('UPDATEクエリーが失敗しました。');
+            exit('UPDATEクエリーが失敗しました。2');
         }
 
         $result = pg_query("SELECT * FROM video where v = '$v'");
