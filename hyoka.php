@@ -26,7 +26,7 @@
 
         foreach($arrSelectHyoka as $value){
             $point = $row[$value] + 1;
-            $sql = "UPDATE video SET `$value` = '$point' WHERE v = '$v'";
+            $sql = "UPDATE video SET $value = $point WHERE v = $v";
 
             $result_flag = pg_query($sql);
 
@@ -37,7 +37,7 @@
 
         $time = date("Y-m-d H:i:s");
         $total = $row["total"] + 1;
-        $sql = "UPDATE video SET time = '$time', total = $total WHERE v = '$v'";
+        $sql = "UPDATE video SET time = $time, total = $total WHERE v = $v";
 
         $result_flag = pg_query($sql);
 
