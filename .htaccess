@@ -1,7 +1,7 @@
 <Files ~ "^\.(htaccess|htpasswd)$">
 deny from all
 </Files>
-AuthUserFile /home/GakuA/public_html/.htpasswd
+AuthUserFile /home/toko-channel/public_html/.htpasswd
 AuthGroupFile /dev/null
 AuthName "Please enter your ID and password"
 AuthType Basic
