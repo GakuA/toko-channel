@@ -1,7 +1,7 @@
 <Files ~ "^\.(htaccess|htpasswd)$">
 deny from all
 </Files>
-AuthUserFile https://github.com/GakuA/toko-channel/app/.htpasswd
+AuthUserFile /GakuA/toko-channel/app/.htpasswd
 AuthGroupFile /dev/null
 AuthName "Please enter your ID and password"
 AuthType Basic
