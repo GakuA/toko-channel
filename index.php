@@ -163,6 +163,9 @@
 			<!-- Rakuten Widget TO HERE -->
 		</div>
 	</div>
+	<?php
+echo __FILE__;
+?>
 </body>
 
 </html>
