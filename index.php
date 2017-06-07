@@ -75,8 +75,6 @@
 			<div>
 				<div style="float:right;margin-right:-30px;">
 					<div style="display:inline-block;" class="fb-like" data-href="http://toko-channel.com/" data-width="69" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-					<!-- +1 ボタン を表示したい位置に次のタグを貼り付けてください。 -->
-					<div class="g-plusone" style="display:inline-block;width:65px" data-size="medium" data-href="http://toko-channel.com/"></div>
 				</div>
 				<a href="/" style="float:left;margin-top:-12px"><img src="img/logo.jpg" alt="投稿チャンネル">
 				</a>
