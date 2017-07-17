@@ -8,7 +8,7 @@
         die('接続失敗です。');
     }
 
-    $result = pg_query("SELECT v FROM video limit 100, 100");
+    $result = pg_query("SELECT v FROM video limit 100 offset 100");
     if(!$result){
         exit('SELECTクエリーが失敗しました。');
     }
