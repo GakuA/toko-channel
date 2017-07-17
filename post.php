@@ -101,7 +101,7 @@
 <!--
         // 「OK」時の処理開始 ＋ 確認ダイアログの表示
         alert('投稿済みの動画です！');
-            location.href = "./?id=".<?php echo $v ?>;
+            location.href = "./?id=".<?php echo $v; ?>;
 
 // -->
 </script>
