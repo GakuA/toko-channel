@@ -13,21 +13,20 @@
         exit('SELECTクエリーが失敗しました。');
     }
 
-//    while($row = pg_fetch_assoc($result)){
-//        $vvv = $row;
-//        if(getPageTitle('https://www.youtube.com/watch?v=' . $vvv) == "YouTube"){
-//            $result_flag = pg_query("DELETE FROM video WHERE v = '$vvv'");
+    while($row = pg_fetch_assoc($result)){
+        $vvv = $row;
+        if(getPageTitle('https://www.youtube.com/watch?v=' . $vvv) == "YouTube"){
+            $result_flag = pg_query("DELETE FROM video WHERE v = '$vvv'");
 
-            $result_flag = pg_query("DELETE FROM video WHERE v = '6Hqh7M_OpeI'");
             if (!$result_flag) {
                 die('DELETEクエリーが失敗しました。');
             }
 
-//            while(@unlink("comment/yamamototamura_".$vvv."/comment.dat")){
-//            }
-//            while(@rmdir("comment/yamamototamura_".$vvv)){
-//            }
-//        }
-//    }
+            while(@unlink("comment/yamamototamura_".$vvv."/comment.dat")){
+            }
+            while(@rmdir("comment/yamamototamura_".$vvv)){
+            }
+        }
+    }
 
     pg_close($link);
