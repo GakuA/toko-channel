@@ -7,7 +7,7 @@
     if (!$link) {
         die('接続失敗です。');
     }
-
+var_dump($link);
     $result = pg_query("SELECT v FROM video");
     if(!$result){
         exit('SELECTクエリーが失敗しました。');
