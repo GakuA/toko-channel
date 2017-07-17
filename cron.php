@@ -29,4 +29,4 @@
         }
     }
 
-    mysql_close($link);
+    pg_close($link);
