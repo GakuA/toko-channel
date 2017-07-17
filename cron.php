@@ -8,13 +8,14 @@
         die('接続失敗です。');
     }
 
-    $result = pg_query("SELECT v FROM video LIMIT 300");
+    $result = pg_query("SELECT v FROM video limit 1");
     if(!$result){
         exit('SELECTクエリーが失敗しました。');
     }
 
     while($row = pg_fetch_assoc($result)){
-        $vvv = $row;
+        $vvv = $row['v'];
+        var_dump($vvv);
         if(getPageTitle('https://www.youtube.com/watch?v=' . $vvv) == "YouTube"){
             $result_flag = pg_query("DELETE FROM video WHERE v = '$vvv'");
 
