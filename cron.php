@@ -1,13 +1,6 @@
-<script type="text/javascript">
-<!--
-        // 「OK」時の処理開始 ＋ 確認ダイアログの表示
-        alert('投稿済みの動画です！');
-
-// -->
-</script>
 <?php
 
-     include "function.inc";
+    include "function.inc";
 
 //mysql
     $link = pg_connect('host=ec2-23-21-224-199.compute-1.amazonaws.com dbname=d8afnl5oh4vu8b user=mvurgftlbjcxfk password=42e63ae60ed1e92cc3a729d3d92e89c03f69e2b37c76ecb2253e0b8d02064d71');
@@ -21,7 +14,7 @@
     }
 
     while($row = pg_fetch_assoc($result)){
-        $vvv = $row['v'];
+        $vvv = $row;
         if(getPageTitle('https://www.youtube.com/watch?v=' . $vvv) == "YouTube"){
             $result_flag = pg_query("DELETE FROM video WHERE v = '$vvv'");
 
