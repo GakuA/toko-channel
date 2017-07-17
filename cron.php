@@ -7,7 +7,13 @@
     if (!$link) {
         die('接続失敗です。');
     }
-var_dump($link);
+    <script type="text/javascript">
+    <!--
+            // 「OK」時の処理開始 ＋ 確認ダイアログの表示
+            alert('test');
+
+    // -->
+    </script>
     $result = pg_query("SELECT v FROM video");
     if(!$result){
         exit('SELECTクエリーが失敗しました。');
