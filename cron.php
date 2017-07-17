@@ -1,3 +1,10 @@
+<script type="text/javascript">
+<!--
+        // 「OK」時の処理開始 ＋ 確認ダイアログの表示
+        alert('投稿済みの動画です！');
+
+// -->
+</script>
 <?php
 
      include "function.inc";
@@ -7,15 +14,7 @@
     if (!$link) {
         die('接続失敗です。');
     }
-?>
-    <script type="text/javascript">
-    <!--
-            // 「OK」時の処理開始 ＋ 確認ダイアログの表示
-            alert('test');
 
-    // -->
-    </script>
-<?php
     $result = pg_query("SELECT v FROM video");
     if(!$result){
         exit('SELECTクエリーが失敗しました。');
