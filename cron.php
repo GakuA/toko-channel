@@ -16,7 +16,7 @@
     while($row = pg_fetch_assoc($result)){
         $vvv = $row;
         if(getPageTitle('https://www.youtube.com/watch?v=' . $vvv) == "YouTube"){
-            $result_flag = pg_query("DELETE FROM video WHERE v = '$vvv' LIMIT 100");
+            $result_flag = pg_query("DELETE FROM video LIMIT 100 WHERE v = '$vvv'");
 
             if (!$result_flag) {
                 die('DELETEクエリーが失敗しました。');
