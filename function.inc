@@ -49,7 +49,7 @@
             $html = mb_convert_encoding($html, "UTF-8", "auto");
         }
 
-        if(preg_match("/<meta name=\"keywords\" content=\"(.*?)\">/i", $html, $matches)){var_dump($url);
+        if(preg_match("/<meta name=\"keywords\" content=\"(.*?)\">/i", $html, $matches)){
             return $matches[1];
         } else {
             return false;
