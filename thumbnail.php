@@ -42,9 +42,10 @@
     }else{
         if(isset($_SESSION["tab"])){var_dump($_SESSION["tabList"]);
             $total = 1;
-            foreach($_SESSION["tabList"][$_SESSION["tab"]] as $value){
+            //foreach($_SESSION["tabList"][$_SESSION["tab"]] as $value){
+            $value = count($_SESSION["tabList"][$_SESSION["tab"]]);
                 $total = $total." * ".$value;
-            }
+            //}
 
             $total = "pow($total, 1/".count($_SESSION["rank"]).")";
 
