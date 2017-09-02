@@ -60,10 +60,10 @@
             </script>
 <?php
         exit;
-        }
+        }var_dump($formUrl);
         $site = "n";
         $thumbnail = getThumbnail($formUrl);
-var_dump($formUrl);
+
         if(strpos($formUrl, "/", strpos($formUrl, "watch") +6)){
             $v = substr($formUrl, strpos($formUrl, "watch") + 6, strpos($formUrl, "/", strpos($formUrl, "watch") + 6) - strpos($formUrl, "watch") - 6);
         }elseif(strpos($formUrl, '?', strpos($formUrl, "watch"))){
