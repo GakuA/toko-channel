@@ -47,7 +47,7 @@
     $site = "";
     $thumbnail = "";
     //ニコ動
-    if(preg_match("/^https:\/\/www.nicovideo.jp\/watch/", $formUrl) === 1){var_dump($formUrl);
+    if(preg_match("/^http:\/\/www.nicovideo.jp\/watch/", $formUrl) === 1){var_dump($formUrl);
         //R-18の場合
         if(stristr(getNicoTag($formUrl), "R-18")){
 ?>
