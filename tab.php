@@ -15,7 +15,7 @@
     }else{
         echo "<div onclick=\"tabClick('new')\" style=\"cursor:pointer;background-color:#aaaaaa";
     }
-    echo ';border-radius:10px 10px 0 0;padding:5px 15px;box-shadow: -1px 0 5px rgba(0,0,0,0.4)inset;margin-right:4px;display:inline-block;font-weight:bold;width:63px;height:20px;">新着動画</div>';
+    echo ';border-radius:10px 10px 0 0;padding:5px 15px;box-shadow: -1px 0 5px rgba(0,0,0,0.4)inset;margin-right:4px;display:inline-block;font-weight:bold;width:63px;height:20px;">トレンド</div>';
 
 //お気に入り
     if($_SESSION["tab"] == "favorite"){
