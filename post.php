@@ -7,7 +7,7 @@
 
     //ニコ動トップのタイトル
     $niconico = getPageTitle('http://www.nicovideo.jp/video_top');
-
+var_dump($niconico);
     $formUrl = htmlspecialchars($_POST["url"]);
     $formUrl = str_replace('https://m.youtube', 'https://www.youtube', $formUrl);
     $formUrl = str_replace('https://youtu.be/', 'https://www.youtube.com/watch?v=', $formUrl);
@@ -30,7 +30,7 @@
     }
 
     if(getPageTitle($formUrl) == "YouTube" || getPageTitle($formUrl) == $niconico){
-var_dump($formUrl);
+
 ?>
 
     <script type="text/javascript" language="javascript">
