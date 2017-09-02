@@ -40,7 +40,7 @@
     function getNicoTag($url){
 
         $html = "";
-
+var_dump($url);
         mb_language("Japanese");
 
         $html = @file_get_contents($url);
