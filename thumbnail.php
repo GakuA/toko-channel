@@ -43,12 +43,16 @@
         if(isset($_SESSION["tab"])){
             $total = 1;
             foreach($_SESSION["tabList"][$_SESSION["tab"]] as $value){
-                $total = $total." + ".$value;
+              if ($total != 1) {
+                $zero .= " and ";
+              }
+              $zero .= "$value != 0";
+              $total = $total." + ".$value;
             }
 
             $total = "($total) / ".count($_SESSION["rank"]);
-var_dump($total);
-            $result = pg_query("SELECT *, ($total / (total + 0.3)) as rank FROM video where $total != 0 order by rank desc, time desc");
+//var_dump($total);
+            $result = pg_query("SELECT *, ($total / (total + 0.5)) as rank FROM video where $zero order by rank desc, time desc");
 
             if(!$result){
                 exit('SELECTクエリーが失敗しました。');
