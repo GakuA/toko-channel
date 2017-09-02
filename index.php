@@ -68,8 +68,8 @@
 			include "function.inc";
 			include "array.inc";
 	?>
-	<div style="width:1272px;margin:0 auto;">
-		<div style="float:left;width:1142px;">
+	<div>
+		<div style="margin: 20px auto 0;width:1142px;">
 
 			<!--top-->
 			<div>
