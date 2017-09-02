@@ -45,7 +45,7 @@
     }
 
     $site = "";
-    $thumbnail = "";
+    $thumbnail = "";var_dump($formUrl);
     //ニコ動
     if(preg_match("/^https:\/\/www.youtube.com\/watch/", $formUrl) === 0){
         //R-18の場合
@@ -61,7 +61,7 @@
 <?php
         exit;
         }
-        $site = "n";var_dump($formUrl);
+        $site = "n";
         $thumbnail = getThumbnail($formUrl);
 
         if(strpos($formUrl, "/", strpos($formUrl, "watch") +6)){
