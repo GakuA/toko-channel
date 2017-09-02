@@ -40,7 +40,7 @@
         echo '<div style="margin:20px">お気に入りの登録がありません</div>';
       }
     }else{
-        if(isset($_SESSION["tab"])){
+        if(isset($_SESSION["tab"])){var_dump($_SESSION["tab"]);
             $total = 1;
             foreach($_SESSION["tabList"][$_SESSION["tab"]] as $value){
                 $total = $total." * ".$value;
