@@ -42,13 +42,13 @@
         $html = "";
 
         mb_language("Japanese");
-var_dump($url);
+
         $html = @file_get_contents($url);
 
         if(mb_detect_encoding($html) != "UTF-8"){
             $html = mb_convert_encoding($html, "UTF-8", "auto");
         }
-
+var_dump($url);
         if(preg_match("/<meta name=\"keywords\" content=\"(.*?)\">/i", $html, $matches)){
             return $matches[1];
         } else {
