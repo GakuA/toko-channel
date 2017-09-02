@@ -41,9 +41,9 @@
       }
     }else{
         if(isset($_SESSION["tab"])){
-            $total = 1;
+            $total = 0;
             foreach($_SESSION["tabList"][$_SESSION["tab"]] as $value){
-              if ($total !== 1) {
+              if ($total !== 0) {
                 $zero .= " and ";
               }
               $zero .= "$value != 0";
