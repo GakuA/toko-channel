@@ -43,8 +43,8 @@
         if(isset($_SESSION["tab"])){
             $total = 0;
             foreach($_SESSION["tabList"][$_SESSION["tab"]] as $value){
-                $total .= " + ".$value;
                 $zero .= ($total != 0 ? ", " : "") . $value . " != 0";
+                $total .= " + ".$value;
             }
 
             $total = "pow($total, 1 / ".count($_SESSION["rank"]).")";
