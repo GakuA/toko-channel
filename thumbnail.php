@@ -51,7 +51,7 @@
             }
 
             $total = "($total) / ".count($_SESSION["rank"]);
-//var_dump($total);
+var_dump($zero);
             $result = pg_query("SELECT *, ($total / (total + 0.5)) as rank FROM video where $zero order by rank desc, time desc");
 
             if(!$result){
