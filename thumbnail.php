@@ -48,7 +48,7 @@
 
             $total = "pow($total, 1/".count($_SESSION["rank"]).")";
 
-            $result = pg_query("SELECT *, $total/(total + 1) as rank FROM video where $total != 0 order by rank desc,time desc");
+            $result = pg_query("SELECT *, $total/(total) as rank FROM video where $total != 0 order by rank desc,time desc");
 var_dump($result);
             if(!$result){
                 exit('SELECTクエリーが失敗しました。');
