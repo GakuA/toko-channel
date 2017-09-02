@@ -41,18 +41,14 @@
       }
     }else{
         if(isset($_SESSION["tab"])){
-            $total = 0;
+            $total = 1;
             foreach($_SESSION["tabList"][$_SESSION["tab"]] as $value){
-              if ($total) {
-                $zero .= ", ";
-              }
-              $zero .= $value . " != 0";
-              $total .= " + ".$value;
+                $total = $total." * ".$value;
             }
 
-            $total = "($total/".count($_SESSION["rank"]).")";
-var_dump($total);var_dump($zero);
-            $result = pg_query("SELECT *, ($total / (total + 1)) as rank FROM video where $zero order by rank desc, time desc");
+            $total = "pow($total, 1 / ".count($_SESSION["rank"]).")";
+var_dump(pow(2,3));
+            $result = pg_query("SELECT *, ($total / (total + 1)) as rank FROM video where $total != 0 order by rank desc, time desc");
 
             if(!$result){
                 exit('SELECTクエリーが失敗しました。');
