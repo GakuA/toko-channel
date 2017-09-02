@@ -40,14 +40,13 @@
         echo '<div style="margin:20px">お気に入りの登録がありません</div>';
       }
     }else{
-        if(isset($_SESSION["tab"])){var_dump($_SESSION["tabList"]);
+        if(isset($_SESSION["tab"])){
             $total = 1;
-            //foreach($_SESSION["tabList"][$_SESSION["tab"]] as $value){
-            $value = count($_SESSION["tabList"][$_SESSION["tab"]]);
-                $total = $total * $value;var_dump($total);
-            //}
+            foreach($_SESSION["tabList"][$_SESSION["tab"]] as $value){var_dump($value);
+                $total = $total." * ".$value;
+            }
 
-            $total = pow($total, 1 / count($_SESSION["rank"]));
+            $total = "pow($total, 1/".count($_SESSION["rank"]).")";
 
             $result = pg_query("SELECT *, $total/(total + 1) as rank FROM video where $total != 0 order by rank desc,time desc");
 
