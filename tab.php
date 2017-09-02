@@ -38,30 +38,30 @@
 
       foreach($_SESSION["tabList"] as $key => $value){
         $width = 0;
-        
+
         foreach($_SESSION["tabList"][$key] as $value2){
           $width += $arrEmoWidth[$value2];
         }
-        
+
         $width = $width + 10;
-        
+
         if($_SESSION["tab"] === "$key"){
             echo '<div style="cursor:default;background-color:#eeeeee';
         }else{
             echo "<div onclick=\"tabClick('$key')\" style=\"cursor:pointer;background-color:#aaaaaa";
         }
-        
+
         echo ";width:".$width."px;height:20px".';border-radius:10px 10px 0 0;padding:5px 15px;box-shadow: -1px 0 5px rgba(0,0,0,0.4)inset;margin-right:4px;display:inline-block;font-weight:bold;height:20px;">';
 
         $word = "";
         foreach($_SESSION["tabList"][$key] as $value2){
           $word = $word.$arrEmotion[$value2];
         }
-        
+
         echo "$word</div>";
-        
+
         echo '<img onclick="closeTab(\'' . $key . '\', \'' . $_SESSION["tab"] . '\')" style="vertical-align:top;margin:8px 11px 0 -26px;" src="img/close.png" onmouseover="this.src=\'img/close_on.png\';" onmouseout="this.src=\'img/close.png\';">';
       }
     }
 ?>
-    <div id="qaKanjoTab" style="display: none; position: absolute; top: 42px; left: 315px; padding: 10px; width: 180px; border: 1px solid rgb(187, 187, 187); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 14px 1px; z-index: 3; background-color: rgb(255, 255, 255);">みんなが評価した感情別に<br>検索できるよ！</div>
+    <div id="qaKanjoTab" style="display: none; position: absolute; top: 32px; left: 315px; padding: 10px; width: 180px; border: 1px solid rgb(187, 187, 187); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 14px 1px; z-index: 3; background-color: rgb(255, 255, 255);">みんなが評価した感情別に<br>検索できるよ！</div>

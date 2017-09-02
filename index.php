@@ -69,7 +69,7 @@
 			include "array.inc";
 	?>
 	<div>
-		<div style="margin: 20px auto 0;width:1142px;">
+		<div style="margin: 20px auto 0;width:1142px;position: relative;">
 
 			<!--top-->
 			<div>
