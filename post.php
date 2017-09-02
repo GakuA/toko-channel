@@ -45,7 +45,7 @@
     }
 
     $site = "";
-    $thumbnail = "";
+    $thumbnail = "";var_dump(preg_match("/^https:\/\/www.youtube.com\/watch/", $formUrl));
     //ニコ動
     if(preg_match("/^https:\/\/www.youtube.com\/watch/", $formUrl) === 0){
         //R-18の場合
@@ -72,7 +72,7 @@
             $v = substr($formUrl, strpos($formUrl, "watch") + 6);
         }
     //YouTube
-    }else{var_dump($formUrl);
+    }else{
         if(strpos($formUrl, "&", strpos($formUrl, "v="))){
             $v = substr($formUrl, strpos($formUrl, "v=") + 2, strpos($formUrl, "&", strpos($formUrl, "v=") + 2) - strpos($formUrl, "v=") - 2);
         }else{
