@@ -31,7 +31,7 @@
     }else{
         echo "<div onclick=\"tabClick('select')\" style=\"cursor:pointer;background-color:#aaaaaa";
     }
-    echo ';border-radius:10px 10px 0 0;padding:5px 15px;box-shadow: -1px 0 5px rgba(0,0,0,0.4)inset;margin-right:4px;display:inline-block;font-weight:bold;width:72px;height:20px;">感情検索<img onmouseover="qaKanjoTab.style.display=\'block\'" onmouseout="qaKanjoTab.style.display=\'none\'" src="img/hatena.png" style="width:15px;margin-left:5px"></div>';
+    echo ';border-radius:10px 10px 0 0;padding:5px 15px;box-shadow: -1px 0 5px rgba(0,0,0,0.4)inset;margin-right:4px;display:inline-block;font-weight:bold;width:72px;height:20px;">評価検索<img onmouseover="qaKanjoTab.style.display=\'block\'" onmouseout="qaKanjoTab.style.display=\'none\'" src="img/hatena.png" style="width:15px;margin-left:5px"></div>';
 
 //感情タブ
     if(isset($_SESSION["tabList"])){
