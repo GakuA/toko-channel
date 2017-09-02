@@ -60,7 +60,7 @@
             </script>
 <?php
         exit;
-        }var_dump($formUrl);
+        }
         $site = "n";
         $thumbnail = getThumbnail($formUrl);
 
