@@ -41,8 +41,8 @@
 
         $html = "";
 
-        mb_language("Japanese");
-var_dump($url);
+        ＠mb_language("Japanese");
+var_dump(mb_language());
         $html = @file_get_contents($url);
 
         if(mb_detect_encoding($html) != "UTF-8"){
