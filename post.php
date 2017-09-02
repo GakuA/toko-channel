@@ -7,13 +7,13 @@
 
     //ニコ動トップのタイトル
     $niconico = getPageTitle('http://www.nicovideo.jp/video_top');
-var_dump($_POST["url"]);
+
     $formUrl = htmlspecialchars($_POST["url"]);
     $formUrl = str_replace('https://m.youtube', 'https://www.youtube', $formUrl);
     $formUrl = str_replace('https://youtu.be/', 'https://www.youtube.com/watch?v=', $formUrl);
     $formUrl = str_replace('#t', '&t', $formUrl);
     $formUrl = str_replace('http://sp.nicovideo.jp/', 'http://www.nicovideo.jp/', $formUrl);
-
+var_dump($formUrl);
 //URLの存在チェック
     if((! @file_get_contents($formUrl) || (preg_match("/^https:\/\/www.youtube.com\/watch/", $formUrl) === 0 && preg_match("/^http:\/\/www.nicovideo.jp\/watch/", $formUrl) === 0))){
 ?>
