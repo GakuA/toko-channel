@@ -103,7 +103,7 @@
 
         <div class='popbox'>
           <a class='open black' href='#'>
-            <input type="button" value="解説する" style="cursor:pointer;">
+            <input type="button" value="コメントする" style="cursor:pointer;">
           </a>
 
           <div class='collapse'>
@@ -114,7 +114,7 @@
                   <form style="padding:2px" action="javascript:void(0)" name="commentform"
                   	id="commentform">
                   	<table cellspacing="0" cellpadding="4">
-                  		<tr style="display:none"><td><input type="button" value="この解説を削除する" onclick="getAjaxText('/commentform.php?cmd=delete&file='+GetFileName(location.pathname)+'&id='+this.form.id.value+'&pw='+this.form.pw.value, 'commentBox')";></td></tr>
+                  		<tr style="display:none"><td><input type="button" value="このコメントを削除する" onclick="getAjaxText('/commentform.php?cmd=delete&file='+GetFileName(location.pathname)+'&id='+this.form.id.value+'&pw='+this.form.pw.value, 'commentBox')";></td></tr>
                   		<tr><td colspan="2">
                   			<ol>
                   				<!--<li><b style="color:#f00">※</b>印は必須です。ハンドル名でも結構ですのでご記入ください。</li>-->
@@ -126,7 +126,7 @@
                   			<td><input type="text" name="name" style="width:200px;" /></td></tr>
                   		<tr><th>パスワード</th>
                   			<td><input type="password" name="pw" style="width:200px;" /></td></tr>
-                  		<tr><td><b>解説 </b><b style="color:#f00">※必須</b></td></tr>
+                  		<tr><td><b>コメント </b><b style="color:#f00">※必須</b></td></tr>
                   		<tr><td colspan="2"><textarea
                   				name="comment" style="resize:none;width:98%;height:120px;"></textarea></td></tr>
                   		<tr><td colspan="2">
@@ -146,17 +146,17 @@
                   				<tr>
                   					<td align="right">
                   						<input type="checkbox" name="rulecheck" id="rulecheck" value="1" /><label
-                  						for="rulecheck">上記「解説に関するお約束」に同意します。</label><br />
+                  						for="rulecheck">上記「コメントに関するお約束」に同意します。</label><br />
                   						<input type="reset" value="リセット" class="commandButton" />
-                  						<input type="button" value="以上の内容で解説を送信する"
+                  						<input type="button" value="以上の内容でコメントを送信する"
                   						class="commandButton"
                   						onclick="
                   							if (this.form.comment.value=='') {
-                  								alert('解説本文をご記入ください。');
+                  								alert('コメント本文をご記入ください。');
                   								return;
                   							}
                   							if (this.form.rulecheck.checked==false) {
-                  								alert('「解説に関するお約束」にご同意ください。');
+                  								alert('「コメントに関するお約束」にご同意ください。');
                   								return;
                   							}
                   							if (this.form.name.value=='') {
