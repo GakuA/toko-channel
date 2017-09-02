@@ -45,9 +45,9 @@
     }
 
     $site = "";
-    $thumbnail = "";var_dump(preg_match("/^https:\/\/www.youtube.com\/watch/", $formUrl));
+    $thumbnail = "";
     //ニコ動
-    if(preg_match("/^https:\/\/www.youtube.com\/watch/", $formUrl) === 0){
+    if(preg_match("/^https:\/\/www.nicovideo.jp\/watch/", $formUrl) === 1){
         //R-18の場合
         if(stristr(getNicoTag($formUrl), "R-18")){
 ?>
