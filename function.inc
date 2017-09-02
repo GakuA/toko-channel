@@ -48,8 +48,8 @@
         if(mb_detect_encoding($html) != "UTF-8"){
             $html = mb_convert_encoding($html, "UTF-8", "auto");
         }
-var_dump($url);
-        if(preg_match("/<meta name=\"keywords\" content=\"(.*?)\">/i", $html, $matches)){
+
+        if(preg_match("/<meta name=\"keywords\" content=\"(.*?)\">/i", $html, $matches)){var_dump($url);
             return $matches[1];
         } else {
             return false;
