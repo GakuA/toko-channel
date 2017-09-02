@@ -47,7 +47,7 @@
     $site = "";
     $thumbnail = "";
     //ニコ動
-    if(preg_match("/^https:\/\/www.youtube.com\/watch/", $formUrl) === 0){var_dump($formUrl);
+    if(preg_match("/^https:\/\/www.youtube.com\/watch/", $formUrl) === 0){
         //R-18の場合
         if(stristr(getNicoTag($formUrl), "R-18")){
 ?>
@@ -60,7 +60,7 @@
             </script>
 <?php
         exit;
-        }
+        }var_dump($formUrl);
         $site = "n";
         $thumbnail = getThumbnail($formUrl);
 
