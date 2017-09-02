@@ -60,7 +60,7 @@
             </script>
 <?php
         exit;
-        }var_dump($formUrl);
+        }
         $site = "n";
         $thumbnail = getThumbnail($formUrl);
 
@@ -72,7 +72,7 @@
             $v = substr($formUrl, strpos($formUrl, "watch") + 6);
         }
     //YouTube
-    }else{
+    }else{var_dump($formUrl);
         if(strpos($formUrl, "&", strpos($formUrl, "v="))){
             $v = substr($formUrl, strpos($formUrl, "v=") + 2, strpos($formUrl, "&", strpos($formUrl, "v=") + 2) - strpos($formUrl, "v=") - 2);
         }else{
