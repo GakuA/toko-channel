@@ -70,7 +70,7 @@
 
     echo '<div>';
     if($row["site"] == "n"){
-        print '<script type="application/javascript" src="http://embed.nicovideo.jp/watch/' . $_SESSION["v"] . '/script?w=640&h=480"></script><noscript><a href="http://www.nicovideo.jp/watch/' . $_SESSION["v"] . '">' . $row["title"] . '</a></noscript>';
+        echo '<script type="application/javascript" src="http://embed.nicovideo.jp/watch/' . $_SESSION["v"] . '/script?w=640&h=480"></script><noscript><a href="http://www.nicovideo.jp/watch/' . $_SESSION["v"] . '">' . $row["title"] . '</a></noscript>';
     }else{
         echo '<iframe id="video" width="640px" height="480px" src="//www.youtube.com/embed/' . $_SESSION["v"] . '?rel=0" frameborder="0" allowfullscreen></iframe>';
     }
