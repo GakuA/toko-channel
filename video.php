@@ -69,8 +69,8 @@
     $row = pg_fetch_assoc($result);
 
     echo '<div>';
-    if($row["site"] == "n"){
-        echo '<script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/' . $_SESSION["v"] . '?w=640&h=480"></script><noscript><a href="http://www.nicovideo.jp/watch/' . $_SESSION["v"] . '">' . $row["title"] . '</a></noscript>';
+    if($row["site"] == "n"){var_dump($row["site"]);
+        echo '<script type="application/javascript" src="http://embed.nicovideo.jp/watch/' . $_SESSION["v"] . '?w=640&h=480"></script><noscript><a href="http://www.nicovideo.jp/watch/' . $_SESSION["v"] . '">' . $row["title"] . '</a></noscript>';
     }else{
         echo '<iframe id="video" width="640px" height="480px" src="//www.youtube.com/embed/' . $_SESSION["v"] . '?rel=0" frameborder="0" allowfullscreen></iframe>';
     }
@@ -92,7 +92,7 @@
       <?php
           if($row["site"] == ""){
               $url = 'https://www.youtube.com/watch?v=' . $_SESSION["v"];
-          }elseif($row["site"] == "n"){var_dump($row["site"]);
+          }elseif($row["site"] == "n"){
               $url = 'http://www.nicovideo.jp/watch/' . $_SESSION["v"];
           }
 
