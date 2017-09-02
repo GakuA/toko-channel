@@ -47,10 +47,10 @@
                 $zero .= " and ";
               }
               $zero .= "$value != 0";
-              $total = $total." + ".$value;
+              $total = $total . " + " . $value;
             }
 
-            $total = "($total) / ".count($_SESSION["rank"]);
+            $total = "($total) / " . count($_SESSION["rank"]);
 var_dump($zero);
             $result = pg_query("SELECT *, (($total) / total) as rank FROM video where $zero order by rank desc, time desc");
 
