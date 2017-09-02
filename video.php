@@ -76,7 +76,7 @@
     }
     echo '</div>';
 
-    echo '<div style="float:right;padding:4px;margin-right:10px;margin-bottom:10px">';
+    echo '<div style="/*float:right;*/padding:4px;margin-right:10px;/*margin-bottom:10px*/">';
 
     $_SESSION["total"] = $row["total"];
     $nicoThumb = $row["thumbnail"];
