@@ -92,7 +92,7 @@
       <?php
           if($row["site"] == ""){
               $url = 'https://www.youtube.com/watch?v=' . $_SESSION["v"];
-          }elseif($row["site"] == "n"){
+          }elseif($row["site"] == "n"){var_dump($row["site"]);
               $url = 'http://www.nicovideo.jp/watch/' . $_SESSION["v"];
           }
 
