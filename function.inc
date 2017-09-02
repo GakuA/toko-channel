@@ -40,9 +40,9 @@
     function getNicoTag($url){
 
         $html = "";
-var_dump($url);
-        mb_language("Japanese");
 
+        mb_language("Japanese");
+var_dump($url);
         $html = @file_get_contents($url);
 
         if(mb_detect_encoding($html) != "UTF-8"){
