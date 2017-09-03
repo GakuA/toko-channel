@@ -232,7 +232,7 @@
 
 
 ?>
-    <div id="qaHyoka" style="display:none;background-color:#ffffff;position:absolute;top:440px;left:740px;padding:10px;width:212px;border:1px solid #BBBBBB;border-radius:8px;box-shadow:0 0 14px 1px rgba(0,0,0,0.3);z-index:3">左の動画を見て感じた事に<br>いくつでもチェックを入れて<br>｢評価する｣ボタンを押してね。<br>上のグラフに反映されるよ！</div>
+    <div id="qaHyoka" style="display:none;background-color:#ffffff;position:absolute;top:440px;left:740px;padding:10px;width:212px;border:1px solid #BBBBBB;border-radius:8px;box-shadow:0 0 14px 1px rgba(0,0,0,0.3);z-index:3">動画を見て感じた事に<br>いくつでもチェックを入れて<br>｢評価する｣ボタンを押してね。<br>グラフに反映されるよ！</div>
 
 
 </div>
