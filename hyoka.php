@@ -70,7 +70,7 @@
 
     echo "<div style=\"vertical-align:top;display:inline-block;\">\n";
     echo "<img style=\"position:relative;z-index:1\" src=\"img/graph.jpg\"></div>\n";
-    echo "<div id=\"bar\" style=\"margin-top:1px;vertical-align:top;display:inline-block;text-align:left;margin-left:-142px;position:relative;z-index:2\">";
+    echo "<div id=\"bar\" style=\"margin-top:1px;vertical-align:top;display:inline-block;text-align:left;margin-left:-143px;position:relative;z-index:2\">";
 
     $color = "#FF0000";
 
@@ -83,8 +83,7 @@
         }else{
             $width = $row[$key] / $row["total"] *138;
         }
-        echo "<span style=\"display:inline-block;margin:2px 0;width:" . $width . "px;height:15px;background-color:" . $color . "\"></span>";
-        echo "<br>\n";
+        echo "<div style=\"display:inline-block;margin:2px 0;width:" . $width . "px;height:15px;background-color:" . $color . "\"></div>\n";
     }
 
     echo "</div>\n";
