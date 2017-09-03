@@ -83,7 +83,7 @@
         }else{
             $width = $row[$key] / $row["total"] *138;
         }
-        echo "<div style=\"display:inline-block;margin:2px 0;width:" . $width . "px;height:15px;background-color:" . $color . "\"></div>\n";
+        echo "<div style=\"margin:2px 0 4px;width:" . $width . "px;height:15px;background-color:" . $color . "\"></div>\n";
     }
 
     echo "</div>\n";
