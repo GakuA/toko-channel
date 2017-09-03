@@ -64,4 +64,4 @@
       }
     }
 ?>
-    <div id="qaKanjoTab" style="display: none; position: absolute; top: 32px; left: 315px; padding: 10px; width: 180px; border: 1px solid rgb(187, 187, 187); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 14px 1px; z-index: 3; background-color: rgb(255, 255, 255);">みんなの評価で<br>検索できるよ！</div>
+    <div id="qaKanjoTab" style="display: none; position: absolute; top: 32px; left: 315px; padding: 10px; width: 7em; border: 1px solid rgb(187, 187, 187); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 14px 1px; z-index: 3; background-color: rgb(255, 255, 255);">みんなの評価で<br>検索できるよ！</div>
