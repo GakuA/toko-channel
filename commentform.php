@@ -6,13 +6,13 @@
 	このパスワードで全てのコメントを削除可能
 	漏洩防止のため必ず変更してください。
 */
-$root = 'yamamototamura';
+$root = 'akazawagaku';
 /*--------------------------------------------
 	コメントを保存するディレクトリ
 	全てのコメントはこのディレクトリに保存される
 	漏洩防止のため必ず変更してください。
 */
-$commentdir = "comment/yamamototamura_".$_SESSION["v"];
+$commentdir = "comment/".$_SESSION["v"];
 /*--------------------------------------------*/
 $Comment = array();
 if (!is_dir($commentdir)) mkdir($commentdir);
