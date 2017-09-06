@@ -22,7 +22,7 @@
 <div style="margin-top:3px;float:left;">
 <input type="button" value="検索" style="cursor:pointer" onClick="selectEmo()"><br>
 </div>
-<div id="str" style="margin-left:45px"></div>
+<div id="str" style="margin-top:4px;margin-left:45px"></div>
 <!--</div>-->
 
 </form>
