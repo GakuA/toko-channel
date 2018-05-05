@@ -101,6 +101,7 @@
   </div>
 </div>
 
+<!--
         <div class='popbox'>
           <a class='open black' href='#'>
             <input type="button" value="コメントする" style="cursor:pointer;">
@@ -117,7 +118,9 @@
                   		<tr style="display:none"><td><input type="button" value="このコメントを削除する" onclick="getAjaxText('/commentform.php?cmd=delete&file='+GetFileName(location.pathname)+'&id='+this.form.id.value+'&pw='+this.form.pw.value, 'commentBox')";></td></tr>
                   		<tr><td colspan="2">
                   			<ol>
+-->
                   				<!--<li><b style="color:#f00">※</b>印は必須です。ハンドル名でも結構ですのでご記入ください。</li>-->
+<!--
                   				<li>パスワードを設定しておけばご自分の記事を削除できます。</li>
                   				<li>当サイトにふさわしくないと判断した記事は管理者の独断で削除することがあります。</li>
                   			</ol>
@@ -131,7 +134,6 @@
                   				name="comment" style="resize:none;width:98%;height:120px;"></textarea></td></tr>
                   		<tr><td colspan="2">
                   			<table width="100%">
-<!--
                   				<tr>
                   					<td><b>見どころTime</b></td>
                   				</tr>
