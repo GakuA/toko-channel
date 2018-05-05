@@ -112,7 +112,7 @@
 				<!-- <a class="black" href="how.html">使い方</a>
 				<span style="float:right;">Copyright © 2015 toko channel All Rights Reserved.</span>
 				<span style="margin-left:10px"><a class="black" href="mailto:info@toko-channel.com">お問い合わせ</a></span> -->
-				<span><a class="black" href="mailto:akazawagaku@gmail.com">お問い合わせ</a></span>
+				<span><a class="black" href="mailto:tokochannel1@gmail.com">お問い合わせ</a></span>
 			</div>
 		</div>
 	</div>
