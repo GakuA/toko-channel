@@ -52,7 +52,7 @@
 
         $row = pg_fetch_assoc($result);
 
-    echo "<div style=\"width:130px;display:inline-block;margin-left:10px\">\n";
+    echo "<div style=\"width:110px;display:inline-block;margin-left:20px\">\n";
     echo "<form style=\"position:relative;\" name=\"hyoka\" method=\"post\">\n";
 
     $i = 0;
