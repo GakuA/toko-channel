@@ -144,7 +144,7 @@
                   						③ <input type="text" name="h3" maxlength="2" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" style="width:15px">：<input type="text" name="m3" maxlength="2" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" style="width:15px">：<input type="text" name="s3" maxlength="2" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" style="width:15px">
                   					</td>
                   				</tr>
--->
+
                   				<tr>
                   					<td align="right">
                   						<input type="checkbox" name="rulecheck" id="rulecheck" value="1" /><label
@@ -190,7 +190,7 @@
         <script type="text/javascript" src="/commentform.js"></script>
     </div>
 </div>
-
+-->
 <?php
 
     echo "<div id=\"hyoka\"><div style=\"width:110px;display:inline-block;margin-left:10px\">\n";
