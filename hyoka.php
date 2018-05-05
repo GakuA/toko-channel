@@ -52,25 +52,25 @@
 
         $row = pg_fetch_assoc($result);
 
-    echo "<div style=\"width:110px;display:inline-block;margin-left:10px\">\n";
+    echo "<div style=\"width:130px;display:inline-block;margin-left:10px\">\n";
     echo "<form style=\"position:relative;\" name=\"hyoka\" method=\"post\">\n";
 
     $i = 0;
     foreach($arrEmotion as $key => $value){
-        echo "<label style=\"position:absolute; top:" . 19 * $i . "px;\" for=\"$key\">";
-        echo "<input type=\"checkbox\" id=\"$key\" name=\"chk[]\" value=\"".$key."\">".$value;
+        echo "<label style=\"position:absolute; top:" . 30 * $i . "px;\" for=\"$key\">";
+        echo "<input type=\"checkbox\" id=\"$key\" name=\"chk[]\" value=\"".$key."\" style=\"width:14px;height:13px\">".$value;
         echo "</label>";
         echo "<br>\n";
         $i++;
     }
-    echo "<span style=\"position:absolute; top:274px\"><input type=\"button\" value=\"評価する\" name=\"go\" style=\"cursor:pointer\" onclick=\"check_hyoka('a')\"><img onmouseover=\"qaHyoka.style.display='block'\" onmouseout=\"qaHyoka.style.display='none'\" src=\"img/hatena.png\" style=\"width:15px;margin-left:5px\"></span><br>\n";
-    echo "<div style=\"position:absolute; top:300px\">評価回数：".$row["total"]."</div>\n";
+    echo "<span style=\"position:absolute; top:420px\"><input style=\"width:90px\" type=\"button\" value=\"評価する\" name=\"go\" style=\"cursor:pointer\" onclick=\"check_hyoka('a')\"><img onmouseover=\"qaHyoka.style.display='block'\" onmouseout=\"qaHyoka.style.display='none'\" src=\"img/hatena.png\" style=\"width:15px;margin-left:5px\"></span><br>\n";
+    echo "<div style=\"position:absolute; top:450px\">評価回数：".$row["total"]."</div>\n";
     echo "</form>\n";
     echo "</div>\n";
 
-    echo "<div style=\"vertical-align:top;display:inline-block;\">\n";
-    echo "<img style=\"position:relative;z-index:1\" src=\"img/graph.jpg\"></div>\n";
-    echo "<div id=\"bar\" style=\"margin-top:1px;vertical-align:top;display:inline-block;text-align:left;margin-left:-143px;position:relative;z-index:2\">";
+    echo "<div style=\"vertical-align:top;display:inline-block;margin-top:-4px\">\n";
+    echo "<img style=\"position:relative;z-index:1;height:440px\" src=\"img/graph.jpg\"></div>\n";
+    echo "<div id=\"bar\" style=\"margin-top:-3px;vertical-align:top;display:inline-block;text-align:left;margin-left:-143px;position:relative;z-index:2\">";
 
     $color = "#FF0000";
 
@@ -81,7 +81,7 @@
         if($row["total"] == 0){
             $width = 0;
         }else{
-            $width = $row[$key] / $row["total"] *138;
+            $width = $row[$key] / $row["total"] *216;
         }
         echo "<div style=\"margin:2px 0 4px;width:" . $width . "px;height:15px;background-color:" . $color . "\"></div>\n";
     }
