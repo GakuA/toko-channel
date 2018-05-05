@@ -213,9 +213,9 @@
     echo "</form>\n";
     echo "</div>\n";
 
-    echo "<div style=\"vertical-align:top;display:inline-block;\">\n";
-    echo "<img style=\"position:relative;z-index:1\" src=\"img/graph.jpg\"></div>\n";
-    echo "<div id=\"bar\" style=\"margin-top:-1px;vertical-align:top;display:inline-block;text-align:left;margin-left:-143px;position:relative;z-index:2\">";
+    echo "<div style=\"vertical-align:top;display:inline-block;margin-top:-4px\">\n";
+    echo "<img style=\"position:relative;z-index:1;height:440px\" src=\"img/graph.jpg\"></div>\n";
+    echo "<div id=\"bar\" style=\"margin-top:-3px;vertical-align:top;display:inline-block;text-align:left;margin-left:-222px;position:relative;z-index:2\">";
 
     $color = "#FF0000";
 
