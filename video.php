@@ -199,7 +199,7 @@
     echo "<form style=\"position:relative;\" name=\"hyoka\" method=\"post\">\n";
     $i = 0;
     foreach($arrEmotion as $key => $value){
-        echo "<label style=\"position:absolute; top:" . 31 * $i . "px;\" for=\"$key\">";
+        echo "<label style=\"position:absolute; top:" . 30 * $i . "px;\" for=\"$key\">";
         echo "<input type=\"checkbox\" id=\"$key\" name=\"chk[]\" value=\"".$key."\">".$value;//."：".$row[$key];
         echo "</label>";
         echo "<br>\n";
