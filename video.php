@@ -195,7 +195,7 @@
 </div>
 <?php
 
-    echo "<div id=\"hyoka\"><div style=\"width:110px;display:inline-block;margin-left:20px;\">\n";
+    echo "<div id=\"hyoka\"><div style=\"width:115px;display:inline-block;margin-left:20px;\">\n";
     echo "<form style=\"position:relative;\" name=\"hyoka\" method=\"post\">\n";
     $i = 0;
     foreach($arrEmotion as $key => $value){
