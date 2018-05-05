@@ -226,7 +226,7 @@
         if($row["total"] == 0){
             $width = 0;
         }else{
-            $width = $row[$key] / $row["total"] *138;
+            $width = $row[$key] / $row["total"] *216;
         }
 //        echo "<img style=\"margin:2px 0\" src=\"img/bar.jpg\" width=\"".$width."px\" height=\"15px\">";
         echo "<div style=\"margin:2px 0 4px;width:" . $width . "px;height:26px;background-color:" . $color . "\"></div>\n";
