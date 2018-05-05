@@ -200,7 +200,7 @@
     $i = 0;
     foreach($arrEmotion as $key => $value){
         echo "<label style=\"position:absolute; top:" . 30 * $i . "px;\" for=\"$key\">";
-        echo "<input type=\"checkbox\" id=\"$key\" name=\"chk[]\" value=\"".$key."\">".$value;//."：".$row[$key];
+        echo "<input type=\"checkbox\" id=\"$key\" name=\"chk[]\" value=\"".$key."\"><span>".$value."</span>";//."：".$row[$key];
         echo "</label>";
         echo "<br>\n";
         $i++;
