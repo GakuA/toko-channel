@@ -208,8 +208,8 @@
 
     $v = $_SESSION["v"];
     $cv = $_COOKIE["$v"];
-    echo "<span style=\"position:absolute; top:350px\"><input style=\"width:100px\" type=\"button\" value=\"評価する\" name=\"go\" style=\"cursor:pointer\" onclick=\"check_hyoka('$cv')\"><img onmouseover=\"qaHyoka.style.display='block'\" onmouseout=\"qaHyoka.style.display='none'\" src=\"img/hatena.png\" style=\"width:15px;margin-left:5px\"></span><br>\n";
-    echo "<div style=\"position:absolute; top:375px\">評価回数：".$_SESSION["total"]."</div>\n";
+    echo "<span style=\"position:absolute; top:420px\"><input style=\"width:100px\" type=\"button\" value=\"評価する\" name=\"go\" style=\"cursor:pointer\" onclick=\"check_hyoka('$cv')\"><img onmouseover=\"qaHyoka.style.display='block'\" onmouseout=\"qaHyoka.style.display='none'\" src=\"img/hatena.png\" style=\"width:15px;margin-left:5px\"></span><br>\n";
+    echo "<div style=\"position:absolute; top:450px\">評価回数：".$_SESSION["total"]."</div>\n";
     echo "</form>\n";
     echo "</div>\n";
 
@@ -229,7 +229,7 @@
             $width = $row[$key] / $row["total"] *138;
         }
 //        echo "<img style=\"margin:2px 0\" src=\"img/bar.jpg\" width=\"".$width."px\" height=\"15px\">";
-        echo "<div style=\"margin:2px 0 4px;width:" . $width . "px;height:21px;background-color:" . $color . "\"></div>\n";
+        echo "<div style=\"margin:2px 0 4px;width:" . $width . "px;height:25px;background-color:" . $color . "\"></div>\n";
     }
 
     echo "</div></div>\n";
