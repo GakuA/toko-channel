@@ -191,11 +191,11 @@
     </div>
 </div>
 -->
-<div style="height:84px">
+<div style="height:6px">
 </div>
 <?php
 
-    echo "<div id=\"hyoka\"><div style=\"width:130px;display:inline-block;margin-left:20px;\">\n";
+    echo "<div id=\"hyoka\"><div style=\"width:110px;display:inline-block;margin-left:20px;\">\n";
     echo "<form style=\"position:relative;\" name=\"hyoka\" method=\"post\">\n";
     $i = 0;
     foreach($arrEmotion as $key => $value){
@@ -208,7 +208,7 @@
 
     $v = $_SESSION["v"];
     $cv = $_COOKIE["$v"];
-    echo "<span style=\"position:absolute; top:420px\"><input style=\"width:100px\" type=\"button\" value=\"評価する\" name=\"go\" style=\"cursor:pointer\" onclick=\"check_hyoka('$cv')\"><img onmouseover=\"qaHyoka.style.display='block'\" onmouseout=\"qaHyoka.style.display='none'\" src=\"img/hatena.png\" style=\"width:15px;margin-left:5px\"></span><br>\n";
+    echo "<span style=\"position:absolute; top:420px\"><input style=\"width:90px\" type=\"button\" value=\"評価する\" name=\"go\" style=\"cursor:pointer\" onclick=\"check_hyoka('$cv')\"><img onmouseover=\"qaHyoka.style.display='block'\" onmouseout=\"qaHyoka.style.display='none'\" src=\"img/hatena.png\" style=\"width:15px;margin-left:5px\"></span><br>\n";
     echo "<div style=\"position:absolute; top:450px\">評価回数：".$_SESSION["total"]."</div>\n";
     echo "</form>\n";
     echo "</div>\n";
@@ -229,14 +229,14 @@
             $width = $row[$key] / $row["total"] *138;
         }
 //        echo "<img style=\"margin:2px 0\" src=\"img/bar.jpg\" width=\"".$width."px\" height=\"15px\">";
-        echo "<div style=\"margin:2px 0 4px;width:" . $width . "px;height:25px;background-color:" . $color . "\"></div>\n";
+        echo "<div style=\"margin:2px 0 4px;width:" . $width . "px;height:26px;background-color:" . $color . "\"></div>\n";
     }
 
     echo "</div></div>\n";
 
 
 ?>
-    <div id="qaHyoka" style="display:none;background-color:#ffffff;position:absolute;top:432px;left:784px;padding:10px;width:212px;border:1px solid #BBBBBB;border-radius:8px;box-shadow:0 0 14px 1px rgba(0,0,0,0.3);z-index:3">動画を見て感じた事に<br>いくつでもチェックを入れて<br>｢評価する｣ボタンを押してね。<br>グラフに反映されるよ！</div>
+    <div id="qaHyoka" style="display:none;background-color:#ffffff;position:absolute;top:432px;left:774px;padding:10px;width:212px;border:1px solid #BBBBBB;border-radius:8px;box-shadow:0 0 14px 1px rgba(0,0,0,0.3);z-index:3">動画を見て感じた事に<br>いくつでもチェックを入れて<br>｢評価する｣ボタンを押してね。<br>グラフに反映されるよ！</div>
 
 
 </div>
