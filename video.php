@@ -229,7 +229,7 @@
             $width = $row[$key] / $row["total"] *138;
         }
 //        echo "<img style=\"margin:2px 0\" src=\"img/bar.jpg\" width=\"".$width."px\" height=\"15px\">";
-        echo "<div style=\"margin:2px 0 4px;width:" . $width . "px;height:20px;background-color:" . $color . "\"></div>\n";
+        echo "<div style=\"margin:2px 0 4px;width:" . $width . "px;height:21px;background-color:" . $color . "\"></div>\n";
     }
 
     echo "</div></div>\n";
